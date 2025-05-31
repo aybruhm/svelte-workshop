@@ -1,14 +1,14 @@
 <script>
+  import { FeedbackStore } from "../stores";
   import { fade } from "svelte/transition";
   import FeedbackItem from "./FeedbackItem.svelte";
-  export let feedback = [];
 </script>
 
 <main>
   <div class="feedback-list">
-    {#each feedback as item (item.id)}
+    {#each $FeedbackStore as item (item.id)}
       <div transition:fade|local={{ duration: 300 }}>
-        <FeedbackItem {item} on:delete-feedback />
+        <FeedbackItem {item} />
       </div>
     {/each}
   </div>

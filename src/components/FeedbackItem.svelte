@@ -1,12 +1,13 @@
 <script>
-    import { createEventDispatcher } from "svelte";
+    import { FeedbackStore } from "../stores";
     import Card from "../ui/Card.svelte";
+
     export let item;
 
-    const dispatch = createEventDispatcher();
-
     const handleDelete = (itemId) => {
-        dispatch("delete-feedback", itemId); // Dispatch a custom event to notify parent component
+        FeedbackStore.update((feedback) =>
+            feedback.filter((item) => item.id !== itemId)
+        );
     };
 </script>
 
