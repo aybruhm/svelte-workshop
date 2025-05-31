@@ -27,10 +27,12 @@
     margin: 0;
     font-size: 1.5rem;
   }
-
   .feedback-stats p {
     margin-top: 10px;
     font-size: 1.2rem;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0;
   }
   .feedback-stats p::before {
     content: "★ ";
@@ -40,34 +42,8 @@
     content: " ★";
     color: gold;
   }
-  .feedback-stats p {
-    display: inline-block;
-    margin: 0;
-  }
   .feedback-stats p::before,
   .feedback-stats p::after {
     font-size: 1.5rem;
-  }
-  .feedback-stats p {
-    font-weight: bold;
-  }
-  .feedback-stats p::before {
-    content: "★ ";
-    color: gold;
-  }
-  .feedback-stats p::after {
-    content: " ★";
-    color: gold;
-  }
-  .feedback-stats p {
-    display: inline-block;
-    margin: 0;
-  }
-  .feedback-stats p::before,
-  .feedback-stats p::after {
-    font-size: 1.5rem;
-  }
-  .feedback-stats p {
-    font-weight: bold;
   }
 </style>
